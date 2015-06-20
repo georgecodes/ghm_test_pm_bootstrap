@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+exit 2 unless ARGV.length == 1
+
+unless Kernel.respond_to?(:require_relative)
+  module Kernel
+    def require_relative(path)
+      require File.join(File.dirname(caller[0]), path.to_str)
+    end
+  end
+end
+
+host_name = ARGV[0]
+
+require_relative 'lib/host_enc'
+
+enc = AMP::HostEnc.new
+begin
+  puts enc.resolve(host_name)
+rescue
+  exit 2
+end  
+
+ exit 0

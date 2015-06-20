@@ -1,0 +1,6 @@
+---
+classes:
+  - ghm_role::web
+
+parameters:
+  product: 'ghm'
