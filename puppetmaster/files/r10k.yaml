@@ -4,11 +4,11 @@
  puppet_AMP:
     remote:  git@github.com:georgecodes/ghm_r10k_control.git 
     basedir: '/etc/puppet/environments'
-    prefix: 'AMP'
+    prefix: 'GHM'
  hiera_AMP:
     remote: git@github.com:georgecodes/ghm_r10k_hiera.git
     basedir: '/etc/puppet/hiera'
-    prefix: 'AMP'
+    prefix: 'GHM'
 
 #:purgedirs:
 #  - /etc/puppet/environments
